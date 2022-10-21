@@ -1,1 +1,6 @@
 # Traffic_portal_laravel
+
+Project members
+1. TANVIR MHAMUD SARKER (ID: 20-42746-1)
+2. KHURSHED ALAM SIFAT (ID: 20-42422-1)
+3. TAMAL PAUL (ID: 20-42123-1)
