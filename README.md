@@ -1,4 +1,8 @@
-# Traffic_portal_laravel
+<h1>Traffic portal</h1>
+This a academic project.<br>
+Language:PHP <br>
+Farmwork: Laravel
+
 
 PROJECT MEMBERS
 1. TANVIR MHAMUD SARKER (ID: 20-42746-1)
