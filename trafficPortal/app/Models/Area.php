@@ -9,4 +9,5 @@ class Area extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $primaryKey = 'area_id';
 }
