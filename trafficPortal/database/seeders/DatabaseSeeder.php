@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             TrafficPointSeeder::class,
             TrafficPointStatusSeeder::class,
             DutyListSeeder::class,
+            CivilEmployeeSeeder::class,
         ]);
     }
 }
