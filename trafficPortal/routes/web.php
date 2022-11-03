@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('area_incharge.area_incharge_dash');
 });
 
+Route::get('/tpi', function () {
+    return view('tp_dashboard.tpDashboard');
+});
+
 
 
