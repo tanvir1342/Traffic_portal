@@ -70,7 +70,7 @@
                     <div class="nav_list">
                          <a href="/tpi" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
                          <a href="/tpi/employelist" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Employe List</span> </a> 
-                         <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Duty</span> </a> 
+                         <a href="/tpi/duty" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Duty</span> </a> 
                          <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Approve LEave</span> </a>
                          <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Profile</span> </a> 
                     </div>

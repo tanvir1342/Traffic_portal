@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.tpApp')
 @section('content')
 
 <h1>Welcome to your Area Dashboard</h1>

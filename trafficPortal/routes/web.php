@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\tpdashboard;
+use App\Http\Controllers\tpdutyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,7 @@ Route::get('/', function () {
 Route::get('/tpi',[tpdashboard::class, 'index']);
 Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
 Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
+Route::get('/tpi/duty',[tpdutyController::class, 'em_list']);
+Route::get('/tpi/generateduty',[tpdutyController::class, 'generate']);
 
 

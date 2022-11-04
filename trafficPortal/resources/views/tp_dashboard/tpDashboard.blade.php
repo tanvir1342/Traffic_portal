@@ -42,7 +42,7 @@
                 @foreach($empolye as $empolye)
                 <tr ondblclick="details(<?php echo $empolye->id?>)">
                     <td>{{$empolye->id}}</td>
-                    <td>Karim</td>
+                    <td>anarkoli</td>
                     <td>8 Am - 4 Pm</td>
                 </tr>
                 @endforeach
