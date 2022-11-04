@@ -34,17 +34,17 @@
                                 console.log(link);*/
 
 
-                                html+= "<tr>";
-                                    html+= "<td>"
-                                            +em_id+
-                                            "</td>";
-                                    html+= "<td>"
+                                    html+= "<img class='rounded-circle' src='https://mdbcdn.b-cdn.net/img/new/avatars/9.webp' />"
+                                    html+= "<h1>"
                                             +name+
-                                            "</td>";
-                                     html+= "<td>Slot</td>";
-                                            
+                                            "</h1>";
+                                    html+= "<h1>"
+                                            +em_id+
+                                            "</h1>";
+                                        
+                                    
                                            
-                                html+= "</tr>";
+                       
 
 
                             }

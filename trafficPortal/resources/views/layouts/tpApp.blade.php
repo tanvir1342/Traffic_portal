@@ -13,6 +13,7 @@
         }
         #body-pd{
             background-color: rgb(230, 231, 230);
+       
         }
     </style>
     <body>

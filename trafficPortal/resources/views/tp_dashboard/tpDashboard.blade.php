@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.tpApp')
 @section('content')
 <link href="{{ asset('css/tp_dashboard.css') }}" rel="stylesheet">
 <div class="container-parent">
@@ -30,18 +30,11 @@
     </div>
     {{-- 2nd grid --}}
     <div style="background-color:rgb(255, 255, 255);margin:10px">
-        <div>
-            <table class="table">
-                <tr>
-                    <td>Employe id</td>
-                    <td>Employe Name</td>
-                    <td>Slot</td>
-                </tr>
-                <tbody  id="detils_table">
+        <div  id="detils_table" class="p-3 text-center">
+           
 
-                </tbody>            
-            </table>
         </div>
+        
     </div>
 
     {{-- 3rd --}}
