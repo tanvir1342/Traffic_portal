@@ -41,6 +41,7 @@
                                     html+= "<h1>"
                                             +em_id+
                                             "</h1>";
+                                    html+="<button onclick='email()' type='button' class='btn btn-primary'>Email</button>"
                                         
                                     
                                            
@@ -56,6 +57,15 @@
 
                         }
                     }
+    }
+
+    function email(){
+        document.getElementById("popup").style.display  = "block";
+        console.log("cliked")
+    }
+    function  cnclemail()
+    {
+        document.getElementById("popup").style.display  = "none";
     }
     
 

@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 Route::get('/tpi',[tpdashboard::class, 'index']);
 Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
+Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 
 

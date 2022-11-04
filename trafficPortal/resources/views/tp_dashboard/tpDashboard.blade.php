@@ -1,7 +1,29 @@
+<!-- Modal -->
 @extends('layouts.tpApp')
 @section('content')
 <link href="{{ asset('css/tp_dashboard.css') }}" rel="stylesheet">
+<div id="popup">
+    <button class="btn popup-exit" onclick="cnclemail()"><i class="fa-solid fa-xmark"></i></button>
+    <form action="index.html" method="post">
+        
+        <h1>Email Form</h1>
+        
+        <fieldset>
+         
+          
+          <label for="name">Subject:</label>
+          <input type="text" id="name" name="user_name">
+          
+          <label for="mail">Email Body:</label>
+          <input type="email" id="mail" name="user_email">
+        </fieldset>
+          
+        <button type="submit">Sign Up</button>
+        
+      </form>
+</div>
 <div class="container-parent">
+    
     <div class="child-container-1">
         
         <div style="padding:10px">
@@ -30,6 +52,7 @@
     </div>
     {{-- 2nd grid --}}
     <div style="background-color:rgb(255, 255, 255);margin:10px">
+        
         <div  id="detils_table" class="p-3 text-center">
            
 
@@ -50,6 +73,10 @@
         </div>
     </div>
 </div>
+
+
+  
+  
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="{{asset('js/tp_dashboard.js')}}"></script>

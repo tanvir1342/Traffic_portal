@@ -51,4 +51,21 @@ class tpdashboard extends Controller
         return view('tp_dashboard.tpDashboard')->with('empolye', $students);
 
     }
+
+    public function em_list()
+    {
+        $student = array();
+
+        for($i=0; $i<8; $i++){
+            $student = array(
+                "name" => "Student " . ($i+1),
+                "id" =>($i+1)
+
+            );
+            $students[] = (object)$student; 
+        }
+   
+        return view('tp_dashboard.empolyeList')->with('empolye', $students);
+
+    }
 }
