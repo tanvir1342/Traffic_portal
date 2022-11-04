@@ -14,7 +14,8 @@
                 margin: var(--header-height) 0 0 0;
                 padding: 0 1rem;font-family: var(--body-font);
                 font-size: var(--normal-font-size);
-                transition: .5s}a{text-decoration: none}.header{width: 100%;
+                }
+                a{text-decoration: none}.header{width: 100%;
                 height: var(--header-height);
                 position: fixed;top: 0;left: 0;display: flex;
                 align-items: center;
@@ -65,7 +66,7 @@
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div>
-                     <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
+                     <a href="#" class="nav_logo"><i class='bx bxs-traffic' style='color:#ffffff'  ></i><span class="nav_logo-name">Traffic Portal</span> </a>
                     <div class="nav_list">
                          <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
                          <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> 

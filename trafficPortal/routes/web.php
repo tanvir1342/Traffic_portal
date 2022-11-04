@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\tpdashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ Route::get('/', function () {
     return view('area_incharge.area_incharge_dash');
 });
 
-Route::get('/tpi', function () {
-    return view('tp_dashboard.tpDashboard');
-});
-
+Route::get('/tpi',[tpdashboard::class, 'index']);
+Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
 
 
