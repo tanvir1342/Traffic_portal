@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\tpdashboard;
 use App\Http\Controllers\tpdutyController;
 use App\Http\Controllers\dutyEmployeeControler;
+use App\Http\Controllers\aidashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,20 @@ use App\Http\Controllers\dutyEmployeeControler;
 |
 */
 
-Route::get('/', function () {
-    return view('area_incharge.area_incharge_dash');
-});
+// Route::get('/', function () {
+//     return view('area_incharge.aiDashboard');
+// });
 
 Route::get('/tpi',[tpdashboard::class, 'index']);
 Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
 Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 Route::get('/tpi/duty',[tpdutyController::class, 'em_list']);
 Route::get('/tpi/generateduty',[tpdutyController::class, 'generate']);
+
+Route::get('/ai',[aidashboard::class, 'index']);
+Route::get('/ai/demploye/{id}',[aidashboard::class, 'dutyEmployeProfile']);
+Route::get('/aiprofile',[aidashboard::class, 'AiProfile']);
+// Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 
 // Duty Employee Route
 // Route::get('/dei',[dEdashboard::class, 'index']);
