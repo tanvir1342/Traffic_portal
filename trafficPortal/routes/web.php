@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\tpdashboard;
 use App\Http\Controllers\tpdutyController;
+use App\Http\Controllers\dutyEmployeeControler;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,10 @@ Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
 Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 Route::get('/tpi/duty',[tpdutyController::class, 'em_list']);
 Route::get('/tpi/generateduty',[tpdutyController::class, 'generate']);
+
+// Duty Employee Route
+// Route::get('/dei',[dEdashboard::class, 'index']);
+Route::get('/dutyemployee',[dutyEmployeeControler::class,'loadDutyEmployeeView']);
+// Route::get("dutyemployee/{name}",[dutyEmployeeControler::class,'loadDutyEmployeeView']);
 
 
