@@ -1,4 +1,106 @@
+// -------------------------------------------------------------------------------------------------variable section
+var left_labaels_data = ['Morning', 'Afternoon', 'Night'];
+var left_chart_data = [12, 19, 3];
+// -------------------------------------------------------------------------------------------------normal code section
+//chart section
+//Monthly based left chart 
+      
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: left_labaels_data,
+        datasets: [{
+            label: 'Daily vechile',
+            data: left_chart_data,
+            backgroundColor: [
+                'rgba(255, 99, 132)',
+                'rgba(54, 162, 235)',
+                'rgba(255, 206, 86)',
+                'rgba(75, 192, 192)',
+                'rgba(153, 102, 255)',
+                'rgba(255, 159, 64)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 5
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
 
+
+
+
+
+
+//2nd chart.js
+const ctx2 = document.getElementById('2ndchart').getContext('2d');
+const myChart2 = new Chart(ctx2, {
+type: 'line',
+data: {
+labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+datasets: [{
+label: 'Daily vechile',
+data: [12, 19, 3, 5, 2, 3],
+backgroundColor: [
+    'rgba(255, 99, 132)',
+    'rgba(54, 162, 235)',
+    'rgba(255, 206, 86)',
+    'rgba(75, 192, 192)',
+    'rgba(153, 102, 255)',
+    'rgba(255, 159, 64)'
+],
+borderColor: [
+    'rgba(255, 99, 132, 1)',
+    'rgba(54, 162, 235, 1)',
+    'rgba(255, 206, 86, 1)',
+    'rgba(75, 192, 192, 1)',
+    'rgba(153, 102, 255, 1)',
+    'rgba(255, 159, 64, 1)'
+],
+borderWidth: 5
+}]
+},
+options: {
+scales: {
+y: {
+    beginAtZero: true
+}
+}
+}
+});
+
+// --------------------------------------------------------------------------------------------------function section
+
+function combo(){
+    let data = document.getElementById("chart_option_one");
+    var text = data.options[data.selectedIndex].text;
+    if(text == 'Daily'){
+        
+    //    console.log(text)
+        value = [12, 19, 300];
+        myChart.data.datasets[0].data = value;
+        myChart.update();
+
+    }
+    else{
+        myChart.data.datasets[0].data = left_chart_data;
+        myChart.update();
+    }
+}
     //for live employee data
     function details(employe_id)
     {
@@ -27,8 +129,8 @@
                                 console.log(data);
                                 var html = " ";
                                 for (var i = 0; i<data.length;i++) {
-                                    var em_id = data[i].id;
-                                    var name = data[i].name;
+                                    var em_id = data[i].emplyee_id;
+                                    var name = data[i].employe_name;
                                 
                                 /*console.log(insertdata);
                                 console.log(link);*/
@@ -67,81 +169,11 @@
     {
         document.getElementById("popup").style.display  = "none";
     }
+
+    //chart on left side code
+
     
 
-//chart.js 1st 1
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: 'Daily vechile',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132)',
-                'rgba(54, 162, 235)',
-                'rgba(255, 206, 86)',
-                'rgba(75, 192, 192)',
-                'rgba(153, 102, 255)',
-                'rgba(255, 159, 64)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 5
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
 
-
-//2nd chart.js
-const ctx2 = document.getElementById('2ndchart').getContext('2d');
-const myChart2 = new Chart(ctx2, {
-    type: 'line',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: 'Daily vechile',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132)',
-                'rgba(54, 162, 235)',
-                'rgba(255, 206, 86)',
-                'rgba(75, 192, 192)',
-                'rgba(153, 102, 255)',
-                'rgba(255, 159, 64)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 5
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
 
 

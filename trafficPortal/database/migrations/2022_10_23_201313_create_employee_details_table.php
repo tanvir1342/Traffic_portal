@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('appoinment');
             $table->string("status");
             $table->date('joining_date');
+            $table->bigInteger('tp_id');
             $table->bigInteger('user_id');
             $table->timestamps();
         });

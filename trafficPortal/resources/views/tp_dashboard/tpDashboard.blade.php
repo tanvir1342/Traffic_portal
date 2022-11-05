@@ -29,21 +29,19 @@
         <div style="padding:10px">
             <h1>Duty employee</h1>
             <p class="fs-5">Total Employe: 16</p>
-            <p class="fs-5">Available  Employe: 15</p>
+            <p class="fs-5">Available  Employe: {{$count}}</p>
         </div>
         <hr>
         <div style="padding: 10px">
             <table id="employee">
                 <tr>
                     <th>Employe id</th>
-                    <th>Employe Name</th>
                     <th>Slot</th>
                 </tr>
-                @foreach($empolye as $empolye)
-                <tr ondblclick="details(<?php echo $empolye->id?>)">
-                    <td>{{$empolye->id}}</td>
-                    <td>anarkoli</td>
-                    <td>8 Am - 4 Pm</td>
+                @foreach($employee as $employee)
+                <tr ondblclick="details(<?php echo $employee->d_id?>)">
+                    <td>{{$employee->d_id}}</td>
+                    <td>{{$employee->schedule_name	}}</td>
                 </tr>
                 @endforeach
                 
@@ -62,8 +60,15 @@
 
     {{-- 3rd --}}
     <div class="d-flex justify-content-center" style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
-        <div style="width:500px">
-            <canvas id="myChart"></canvas>
+        <div style="width:500px;margin-top:20px">
+            <select class="form-select" aria-label="Default select example" id="chart_option_one" onclick="combo()">
+                <option selected>Monthly</option>
+                <option value="1">Daily</option>
+            </select>
+            <div >
+                <canvas id="myChart"></canvas>
+            </div>
+            
         </div>
         
     </div>
@@ -80,4 +85,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="{{asset('js/tp_dashboard.js')}}"></script>
+<script>
+    
+    
+</script>
 @endsection
