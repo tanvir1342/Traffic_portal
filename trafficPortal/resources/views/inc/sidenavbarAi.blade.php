@@ -68,10 +68,10 @@
                 <div>
                      <a href="#" class="nav_logo"><i class='bx bxs-traffic' style='color:#ffffff'  ></i><span class="nav_logo-name">Traffic Portal</span> </a>
                     <div class="nav_list">
-                         <a href="/tpi" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
-                         <a href="/tpi/employelist" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Employe List</span> </a> 
-                         <a href="/tpi/duty" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Duty</span> </a> 
-                         <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Approve Leave</span> </a>
+                         <a href="#" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+                         <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Static</span> </a> 
+                         <a href="#" class="nav_link"> <i class='bx bxs-objects-horizontal-center bx-tada bx-flip-horizontal nav_icon' ></i> <span class="nav_name">Traffic Points</span> </a> 
+                         <a href="#" class="nav_link"> <i class='bx bx-mail-send bx-tada bx-flip-horizontal nav_icon'></i> <span class="nav_name">Send Mail</span> </a>
                          <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Profile</span> </a> 
                     </div>
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>

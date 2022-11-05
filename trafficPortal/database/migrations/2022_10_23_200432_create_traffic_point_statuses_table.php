@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('traffic_point_statuses', function (Blueprint $table) {
-            $table->bigInteger('tps_id');
+            $table->id('tps_id');
             $table->string('schedule_name');
-            $table->string('status');
-            $table->bigInteger('avarage_vechile');
+            $table->bigInteger('vechile_numbers');
+            $table->string('zone');
+            $table->date('date');
             $table->bigInteger('tp_id');
             $table->timestamps();
         });
