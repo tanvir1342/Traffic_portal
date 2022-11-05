@@ -61,11 +61,11 @@
     {{-- 3rd --}}
     <div class="d-flex justify-content-center" style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
         <div style="width:500px;margin-top:20px">
-            <select class="form-select" aria-label="Default select example" id="chart_option_one" onclick="combo()">
+            {{-- <select class="form-select" aria-label="Default select example" id="chart_option_one" onclick="combo()">
                 <option selected>Monthly</option>
                 <option value="1">Daily</option>
-            </select>
-            <div >
+            </select> --}}
+            <div>
                 <canvas id="myChart"></canvas>
             </div>
             

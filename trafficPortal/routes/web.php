@@ -25,6 +25,7 @@ Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
 Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 Route::get('/tpi/duty',[tpdutyController::class, 'em_list']);
 Route::get('/tpi/generateduty',[tpdutyController::class, 'generate']);
+Route::get('/tpi/leftchartdata',[tpdashboard::class, 'monthlyzonechart']);
 
 // Duty Employee Route
 // Route::get('/dei',[dEdashboard::class, 'index']);
