@@ -16,18 +16,18 @@ class TrafficPointStatusSeeder extends Seeder
     public function run()
     {
         DB::table('traffic_point_statuses')->insert([
-            'tps_id' => 11111,
-            'schedule_name' => 'schedule name 1',
-            'status' => 'status 1',
-            'avarage_vechile' => 22,
-            'tp_id' => 33221,
+            'schedule_name' => 'morning',
+            'vechile_numbers' => 22,
+            'zone'=>'north',
+            'date'=>'2022-11-05',
+            'tp_id' => 1
         ]);
         DB::table('traffic_point_statuses')->insert([
-            'tps_id' => 2222,
-            'schedule_name' => 'schedule name 2',
-            'status' => 'status 2',
-            'avarage_vechile' => 43,
-            'tp_id' => 53464,
+            'schedule_name' => 'afternoon',
+            'vechile_numbers' => 22,
+            'zone'=>'north',
+            'date'=>'2022-11-05',
+            'tp_id' => 1,
         ]);
     }
 }
