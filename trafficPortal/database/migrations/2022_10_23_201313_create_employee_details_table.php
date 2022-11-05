@@ -14,12 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('employee_details', function (Blueprint $table) {
-            $table->bigInteger('emplyee_id');
+            $table->id('emplyee_id');
             $table->string('employe_name');
             $table->date('dob');
             $table->bigInteger('sallary');
-            $table->bigInteger('rank');
-            $table->timeTz('appoinment', $precision = 0);
+            $table->string('rank');
+            $table->string('appoinment');
+            $table->string("status");
             $table->date('joining_date');
             $table->bigInteger('user_id');
             $table->timestamps();
