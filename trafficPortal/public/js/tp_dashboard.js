@@ -12,10 +12,9 @@ http.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         //console.log(this.responseText);
         if (this.responseText == "data not found") {
-            // document.getElementById('notfound').innerHTML = "Data not found";
-            //console.log("data not found")
+
         } else {
-            //document.getElementById('notfound').innerHTML = "";
+            
             var data = JSON.parse(this.responseText);
             console.log(data);
             var html = " ";
@@ -24,7 +23,7 @@ http.onreadystatechange = function () {
                 afternoon = data[i].afternoon;
                 night = data[i].night;
                 left_chart_data = [morning, afternoon, night];
-                //chart
+
                 //chart 
                 const ctx = document.getElementById('myChart').getContext('2d');
                 const myChart = new Chart(ctx, {
