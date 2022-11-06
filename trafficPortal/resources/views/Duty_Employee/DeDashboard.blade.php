@@ -34,14 +34,16 @@
 <table id="customers">
   <tr>
     <th>Day</th>
-    <th>Area</th>
+    <th>Traffic point</th>
     <th>Schedule</th>
   </tr>
  
   
   @foreach($employe as $employe)
                 <tr>
-                    <td>1</td>
+                    <td>{{$employe->date}}</td>
+                    <td>{{$employe->tp_id}}</td>
+                    <td>{{$employe->schedule_name}}</td>
                     
                 </tr>
   @endforeach

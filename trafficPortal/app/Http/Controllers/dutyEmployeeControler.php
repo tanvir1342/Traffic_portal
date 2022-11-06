@@ -12,7 +12,7 @@ class dutyEmployeeControler extends Controller
     function loadDutyEmployeeView()
     {
          
-        $id = session()->get('employe_id');
+        $id = session()->get('id');
         $employe = DutyList::where('employe_id','=',$id)->get();
         
 
