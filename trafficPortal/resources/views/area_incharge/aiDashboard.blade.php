@@ -24,7 +24,7 @@
             <td>{{$trafficpoint->tp_id}}</td>
             <td>{{$trafficpoint->tp_name}}</td>
             <td>{{$trafficpoint->tp_incharge_name}}</td>
-            <td><a href="/ai/demploye/{{$trafficpoint->tp_id}}">Details</a></td>
+            <td><button onclick="preview(<?php echo $trafficpoint->tp_id?>)" class="btn btn-outline-secondary">View</button></td>
         </tr>
         @endforeach
                 

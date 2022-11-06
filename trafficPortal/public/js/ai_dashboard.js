@@ -1,10 +1,10 @@
 
     //for live employee data
-    function details(employee_id)
+    function preview(tp_id)
     {
         
-        let id = employee_id;
-        var link = "/ai/demploye/"+eID;
+        let id = tp_id;
+        var link = "/ai/demploye/"+id;
         //console.log(id);
         let http = new XMLHttpRequest();
                     http.open('get', link, true);
@@ -27,22 +27,21 @@
                                 console.log(data);
                                 var html = " ";
                                 for (var i = 0; i<data.length;i++) {
-                                    var em_id = data[i].id;
-                                    var name = data[i].name;
+                                    var id = data[i].emplyee_id ;
+                                    var name = data[i].employe_name;
+                                    var status = data[i].status;
                                 
                                 /*console.log(insertdata);
                                 console.log(link);*/
 
 
-                                    html+= "<img class='rounded-circle' src='https://mdbcdn.b-cdn.net/img/new/avatars/9.webp' />"
-                                    html+= "<h1>"
-                                            +name+
-                                            "</h1>";
-                                    html+= "<h1>"
-                                            +em_id+
-                                            "</h1>";
-                                    html+="<button onclick='email()' type='button' class='btn btn-primary'>Email</button>"
-                                        
+                                html+=    "<table>"
+                                html+=    "<tr>"
+                                html+=     "<td>"+id+"</td>";
+                                html+=     "<td>"+name+"</td>";
+                                html+=     "<td>"+status+"</td>";
+                                html+=     "</tr>"
+                                html+=     "</table>"
                                     
                                            
                        
@@ -50,7 +49,7 @@
 
                             }
                             document.getElementById("detils_table").innerHTML = html;
-
+                              //console.log("working");
                             }
 
 
@@ -59,14 +58,7 @@
                     }
     }
 
-    function email(){
-        document.getElementById("popup").style.display  = "block";
-        console.log("cliked")
-    }
-    function  cnclemail()
-    {
-        document.getElementById("popup").style.display  = "none";
-    }
+
     
 
 //chart.js 1st 1

@@ -12,8 +12,8 @@ class aidashboard extends Controller
     public function dutyEmployeProfile($eID)
     {
         
-        $employe = EmployeeDetails::where('tp_id','=',$eID)->get();
-        return $employe;
+        $employee = EmployeeDetails::where('tp_id','=',$eID)->get();
+        return $employee;
 
     }
     public function index()
