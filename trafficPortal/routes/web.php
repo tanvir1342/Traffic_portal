@@ -17,9 +17,9 @@ use App\Http\Controllers\aidashboard;
 |
 */
 
-// Route::get('/', function () {
-//     return view('area_incharge.aiDashboard');
-// });
+Route::get('/', function () {
+    return view('login');
+});
 
 Route::get('/tpi',[tpdashboard::class, 'index']);
 Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);

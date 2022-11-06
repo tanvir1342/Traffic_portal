@@ -119,7 +119,7 @@ color: white;
                                        var rank = data[i].rank;
                                        var tp_id = data[i].tp_id;
                                     
-                                        html+=    "<tr>"
+                                            html+=    "<tr>"
                                             html+=     "<td>"+id+"</td>"
                                             html+=     "<td>"+name+"</td>"
                                             html+=     "<td>"+rank+"</td>"
@@ -128,7 +128,9 @@ color: white;
                                             html+=     " </tr>";
                                             listt.push(data[i].emplyee_id);
 
-                             }      var buttondata = "";
+                             }      
+                                 
+                                    var buttondata = "";
                                     buttondata+= "<button onclick='lock("+listt+")'>lock</button>"
                                     document.getElementById("detils_table").innerHTML = html;
                                     document.getElementById("button").innerHTML = buttondata;

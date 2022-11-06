@@ -9,16 +9,16 @@ use DB;
 
 class aidashboard extends Controller
 {
-    public function dutyEmployeProfile($eID)
+    public function dutyEmployeProfile($id)
     {
         
-        $employee = EmployeeDetails::where('tp_id','=',$eID)->get();
+        $employee = EmployeeDetails::where('tp_id','=',$id)->get();
         return $employee;
 
     }
     public function index()
     {
-        $trafficpoint = TrafficPoint::where('tp_incharge_name','=','MH Soikot')->get();
+        $trafficpoint = TrafficPoint::where('area_id','=',44223)->get();
    
         return view('area_incharge.aiDashboard')->with('trafficpoint', $trafficpoint);
 
