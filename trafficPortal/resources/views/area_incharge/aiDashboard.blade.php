@@ -32,9 +32,18 @@
         </div>
     </div>
     {{-- 2nd grid --}}
-    <div style="background-color:rgb(255, 255, 255);margin:10px">
+    <div style="background-color:rgb(300, 255, 255);margin:10px">
+    
+    <div style="padding:10px">
+            <h1>Details of Employees</h1>
+        </div>
+    <div id= "trafficpoint" ><div  id="detils_table" class="p-3 text-center" style="padding:10px" >
+            
+
+
+
+            </div>
         
-        <div  id="detils_table" class="p-3 text-center">
             
            
 

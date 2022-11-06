@@ -11,11 +11,10 @@ class dutyEmployeeControler extends Controller
     //
     function loadDutyEmployeeView()
     {
-          
-    
-        $id=$request->session()->get('id');
-        // $id = session()->get('employe_id');
-        $employe = DutyList::where('employe_id','=',$id)->get();
+
+        $id = session()->get('id');
+        $employe = DutyList::where('employe_id','=',$id)->get(); 
+
         
 
         return view("Duty_Employee.DeDashboard")->with("employe",$employe);
