@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('traffic_points', function (Blueprint $table) {
-            $table->bigInteger('tp_id');
+            $table->id('tp_id');
             $table->string('tp_name');
             $table->string('tp_incharge_name');
             $table->bigInteger('emplyee_id');

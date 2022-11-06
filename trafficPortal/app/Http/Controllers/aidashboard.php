@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TrafficPoint;
+use DB;
 
 class aidashboard extends Controller
 {
@@ -37,18 +39,9 @@ class aidashboard extends Controller
 
     public function index()
     {
-        $trafficpoint = array();
-
-        for($i=0; $i<8; $i++){
-            $trafficpoint = array(
-                "name" => "Traffic Point " . ($i+1),
-                "id" =>($i+1)
-
-            );
-            $trafficpoints[] = (object)$trafficpoint; 
-        }
+        $trafficpoint = TrafficPoint::where('tp_incharge_name','=','MH Soikot')->get();
    
-        return view('area_incharge.aiDashboard')->with('trafficpoint', $trafficpoints);
+        return view('area_incharge.aiDashboard')->with('trafficpoint', $trafficpoint);
 
     }
 
