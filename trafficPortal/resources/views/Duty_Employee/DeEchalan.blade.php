@@ -33,13 +33,16 @@
     <th>Crime</th>
     <th>Fee</th>
   </tr>
-  <tr>
-    <td>Sifat</td>
-    <td>Bike</td>
-    <td>20-454545-1DH</td>
-    <td>Drunk</td>
-    <td>5000</td>
-  </tr>
+  @foreach($chalan as $chalan)
+                <tr>
+                    <td>{{$chalan->name}}</td>
+                    <td>{{$chalan->trasport}}</td>
+                    <td>{{$chalan->vehicle_no}}</td>
+                    <td>{{$chalan->crime}}</td>
+                    <td>{{$chalan->fee}}</td>
+                    
+                </tr>
+  @endforeach
   
  
 </table>
