@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\DutyList;
 
 class dutyEmployeeControler extends Controller
 {
     //
     function loadDutyEmployeeView()
     {
-        return view("Duty_Employee.DeDashboard");
+         
+        $id = session()->get('id');
+        $employe = DutyList::where('employe_id','=',$id)->get();
+        
+
+        return view("Duty_Employee.DeDashboard")->with("employe",$employe);
+
     }
     function loadDutyScheduleView()
     {
@@ -19,4 +27,10 @@ class dutyEmployeeControler extends Controller
     {
         return view("Duty_Employee.DeEchalan");
     }
+   
+   //
+    // public function weekSchedule()
+    // {
+       
+    // }
 }
