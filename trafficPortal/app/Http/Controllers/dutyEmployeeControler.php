@@ -11,9 +11,10 @@ class dutyEmployeeControler extends Controller
     //
     function loadDutyEmployeeView()
     {
-         
+
         $id = session()->get('id');
-        $employe = DutyList::where('employe_id','=',$id)->get();
+        $employe = DutyList::where('employe_id','=',$id)->get(); 
+
         
 
         return view("Duty_Employee.DeDashboard")->with("employe",$employe);
@@ -21,7 +22,9 @@ class dutyEmployeeControler extends Controller
     }
     function loadDutyScheduleView()
     {
-        return view("Duty_Employee.DeWeekSchedule");
+        $id = session()->get('id');
+        $employe = DutyList::where('employe_id','=',$id)->get(); 
+        return view("Duty_Employee.DeWeekSchedule")->with("employe",$employe);
     }
     function loadE_ChalanView()
     {
