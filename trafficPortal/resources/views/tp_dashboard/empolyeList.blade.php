@@ -33,8 +33,8 @@ color: white;
         </tr>
         @foreach($empolye as $empolye)
         <tr>
-            <td>{{$empolye->id}}</td>
-            <td>Karim</td>
+            <td>{{$empolye->emplyee_id}}</td>
+            <td>{{$empolye->employe_name}}</td>
             <td>8 Am - 4 Pm</td>
         </tr>
         @endforeach

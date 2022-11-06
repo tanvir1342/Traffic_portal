@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('duty_lists', function (Blueprint $table) {
-            $table->bigInteger('d_id');
-            $table->timeTz('time');
+            $table->id('d_id');
             $table->date('date');
             $table->string('schedule_name');
             $table->bigInteger('employe_id');
