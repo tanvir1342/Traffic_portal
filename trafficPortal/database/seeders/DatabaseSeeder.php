@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             CivilEmployeeSeeder::class,
             EmployeeDetailsSeeder::class,
             SystemUserSeeder::class,
+            EChalanSeeder::class,
         ]);
     }
 }

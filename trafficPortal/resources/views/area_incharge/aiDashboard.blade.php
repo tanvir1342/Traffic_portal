@@ -53,13 +53,13 @@
 
     {{-- 3rd --}}
     <div class="d-flex justify-content-center" style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
-        <div style="width:500px">
+        <div style="width:400px">
             <canvas id="myChart"></canvas>
         </div>
         
     </div>
     <div style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
-        <div style="width:500px">
+        <div style="width:600px">
             <canvas id="2ndchart"></canvas>
         </div>
     </div>
