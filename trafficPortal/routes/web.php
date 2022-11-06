@@ -5,6 +5,7 @@ use App\Http\Controllers\tpdashboard;
 use App\Http\Controllers\tpdutyController;
 use App\Http\Controllers\dutyEmployeeControler;
 use App\Http\Controllers\aidashboard;
+use App\Http\Controllers\loginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,9 @@ use App\Http\Controllers\aidashboard;
 Route::get('/', function () {
     return view('login');
 });
+Route::get('/login', [loginController::class,'loginVeiw'])->name('login');
+Route::post('/login', [loginController::class,'login'])->name('login');
+Route::get('/logout',[loginController::class,'logout'])->name('logout');
 
 Route::get('/tpi',[tpdashboard::class, 'index']);
 Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
