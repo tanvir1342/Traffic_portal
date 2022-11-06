@@ -14,15 +14,17 @@
         <div style="padding: 10px">
             <table id="trafficpoint">
             <tr>
-            <th>traffic point id</th>
-            <th>traffic point name</th>
-            <th>traffic point incharge</th>
+            <th>Traffic Point ID</th>
+            <th>Traffic Point Name</th>
+            <th>Traffic Point Incharge</th>
+            <th></th>
         </tr>
         @foreach($trafficpoint as $trafficpoint)
         <tr>
             <td>{{$trafficpoint->tp_id}}</td>
             <td>{{$trafficpoint->tp_name}}</td>
             <td>{{$trafficpoint->tp_incharge_name}}</td>
+            <td><a href="/ai/demploye/{{$trafficpoint->tp_id}}">Details</a></td>
         </tr>
         @endforeach
                 

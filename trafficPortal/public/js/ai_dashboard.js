@@ -1,10 +1,10 @@
 
     //for live employee data
-    function details(trafficpoint_id)
+    function details(employee_id)
     {
         
-        let id = trafficpoint_id;
-        var link = "/ai/demploye/"+id;
+        let id = employee_id;
+        var link = "/ai/demploye/"+eID;
         //console.log(id);
         let http = new XMLHttpRequest();
                     http.open('get', link, true);
