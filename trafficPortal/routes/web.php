@@ -25,24 +25,24 @@ Route::get('/login', [loginController::class,'loginVeiw'])->name('login');
 Route::post('/login', [loginController::class,'login'])->name('login');
 Route::get('/logout',[loginController::class,'logout'])->name('logout');
 
-Route::get('/tpi',[tpdashboard::class, 'index']);
-Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile']);
-Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
-Route::get('/tpi/duty',[tpdutyController::class, 'em_list']);
-Route::get('/tpi/generateduty',[tpdutyController::class, 'generate']);
-Route::get('/tpi/leftchartdata',[tpdashboard::class, 'monthlyzonechart']);
-Route::get('/tpi/leftchartdata/daily',[tpdashboard::class, 'dailyzonechart']);
+Route::get('/tpi',[tpdashboard::class, 'index'])->middleware('Validuser');
+Route::get('/tpi/demploye/{id}',[tpdashboard::class, 'dutyEmployeProfile'])->middleware('Validuser');
+Route::get('/tpi/employelist',[tpdashboard::class, 'em_list'])->middleware('Validuser');
+Route::get('/tpi/duty',[tpdutyController::class, 'em_list'])->middleware('Validuser');
+Route::get('/tpi/generateduty',[tpdutyController::class, 'generate'])->middleware('Validuser');
+Route::get('/tpi/leftchartdata',[tpdashboard::class, 'monthlyzonechart'])->middleware('Validuser');
+Route::get('/tpi/leftchartdata/daily',[tpdashboard::class, 'dailyzonechart'])->middleware('Validuser');
 
-Route::get('/ai',[aidashboard::class, 'index']);
-Route::get('/ai/demploye/{id}',[aidashboard::class, 'dutyEmployeProfile']);
-Route::get('/aiprofile',[aidashboard::class, 'AiProfile']);
+Route::get('/ai',[aidashboard::class, 'index'])->middleware('Validuser')->middleware('Validuser');
+Route::get('/ai/demploye/{id}',[aidashboard::class, 'dutyEmployeProfile'])->middleware('Validuser');
+Route::get('/aiprofile',[aidashboard::class, 'AiProfile'])->middleware('Validuser');
 // Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 
 // Duty Employee Route
 
-Route::get('/dutyemployee',[dutyEmployeeControler::class,'loadDutyEmployeeView']);
-Route::get('/dutyemployee/weekSc',[dutyEmployeeControler::class,'loadDutyScheduleView']);
-Route::get('/dutyemployee/eChalan',[dutyEmployeeControler::class,'loadE_ChalanView']);
+Route::get('/dutyemployee',[dutyEmployeeControler::class,'loadDutyEmployeeView'])->middleware('Validuser');
+Route::get('/dutyemployee/weekSc',[dutyEmployeeControler::class,'loadDutyScheduleView'])->middleware('Validuser');
+Route::get('/dutyemployee/eChalan',[dutyEmployeeControler::class,'loadE_ChalanView'])->middleware('Validuser');
 
 
 
