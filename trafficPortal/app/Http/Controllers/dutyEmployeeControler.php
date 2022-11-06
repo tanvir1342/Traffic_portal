@@ -11,4 +11,12 @@ class dutyEmployeeControler extends Controller
     {
         return view("Duty_Employee.DeDashboard");
     }
+    function loadDutyScheduleView()
+    {
+        return view("Duty_Employee.DeWeekSchedule");
+    }
+    function loadE_ChalanView()
+    {
+        return view("Duty_Employee.DeEchalan");
+    }
 }

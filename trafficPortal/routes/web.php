@@ -35,8 +35,10 @@ Route::get('/aiprofile',[aidashboard::class, 'AiProfile']);
 // Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 
 // Duty Employee Route
-// Route::get('/dei',[dEdashboard::class, 'index']);
+
 Route::get('/dutyemployee',[dutyEmployeeControler::class,'loadDutyEmployeeView']);
-// Route::get("dutyemployee/{name}",[dutyEmployeeControler::class,'loadDutyEmployeeView']);
+Route::get('/dutyemployee/weekSc',[dutyEmployeeControler::class,'loadDutyScheduleView']);
+Route::get('/dutyemployee/eChalan',[dutyEmployeeControler::class,'loadE_ChalanView']);
+
 
 
