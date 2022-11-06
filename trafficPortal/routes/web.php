@@ -27,8 +27,10 @@ Route::get('/tpi/duty',[tpdutyController::class, 'em_list']);
 Route::get('/tpi/generateduty',[tpdutyController::class, 'generate']);
 
 // Duty Employee Route
-// Route::get('/dei',[dEdashboard::class, 'index']);
+
 Route::get('/dutyemployee',[dutyEmployeeControler::class,'loadDutyEmployeeView']);
-// Route::get("dutyemployee/{name}",[dutyEmployeeControler::class,'loadDutyEmployeeView']);
+Route::get('/dutyemployee/weekSc',[dutyEmployeeControler::class,'loadDutyScheduleView']);
+Route::get('/dutyemployee/eChalan',[dutyEmployeeControler::class,'loadE_ChalanView']);
+
 
 
