@@ -19,14 +19,21 @@ class TrafficPointStatusSeeder extends Seeder
             'schedule_name' => 'morning',
             'vechile_numbers' => 22,
             'zone'=>'north',
-            'date'=>'2022-11-05',
+            'date'=>'2022-11-06',
             'tp_id' => 1
         ]);
         DB::table('traffic_point_statuses')->insert([
             'schedule_name' => 'afternoon',
             'vechile_numbers' => 22,
             'zone'=>'north',
-            'date'=>'2022-11-05',
+            'date'=>'2022-11-06',
+            'tp_id' => 1,
+        ]);
+        DB::table('traffic_point_statuses')->insert([
+            'schedule_name' => 'night',
+            'vechile_numbers' => 22,
+            'zone'=>'north',
+            'date'=>'2022-11-06',
             'tp_id' => 1,
         ]);
         DB::table('traffic_point_statuses')->insert([
