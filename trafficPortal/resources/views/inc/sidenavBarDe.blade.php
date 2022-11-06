@@ -69,10 +69,10 @@
                      <a href="#" class="nav_logo"><i class='bx bxs-traffic' style='color:#ffffff'  ></i><span class="nav_logo-name">Traffic Portal</span> </a>
                     <div class="nav_list">
                          <a href="/dutyemployee" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
-                         <a href="/tpi/employelist" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Employe List</span> </a> 
-                         <a href="/tpi/duty" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Duty</span> </a> 
-                         <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Approve LEave</span> </a>
-                         <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Profile</span> </a> 
+                         <!-- <a href="/tpi/employelist" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Employe List</span> </a>  -->
+                         <a href="/dutyemployee/weekSc" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Week Schedule</span> </a> 
+                         <a href="/dutyemployee/eChalan" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">E-Chalan</span> </a>
+                         <!-- <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Profile</span> </a>  -->
                     </div>
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
             </nav>
