@@ -2,26 +2,7 @@
 @extends('layouts.aiApp')
 @section('content')
 <link href="{{ asset('css/ai_dashboard.css') }}" rel="stylesheet">
-<div id="popup">
-    <button class="btn popup-exit" onclick="cnclemail()"><i class="fa-solid fa-xmark"></i></button>
-    <form action="index.html" method="post">
-        
-        <h1>Email Form</h1>
-        
-        <fieldset>
-         
-          
-          <label for="name">Subject:</label>
-          <input type="text" id="name" name="user_name">
-          
-          <label for="mail">Email Body:</label>
-          <input type="email" id="mail" name="user_email">
-        </fieldset>
-          
-        <button type="submit">Sign Up</button>
-        
-      </form>
-</div>
+
 <div class="container-parent">
     
     <div class="child-container-1">
@@ -32,18 +13,18 @@
         <hr>
         <div style="padding: 10px">
             <table id="trafficpoint">
-                <tr>
-                    <th>Traffic Point ID</th>
-                    <th>Traffic Point Name</th>
-                    <th>Traffic Point Incharge Name</th>
-                </tr>
-                @foreach($trafficpoint as $trafficpoint)
-                <tr ondblclick="details(<?php echo $trafficpoint->id?>)">
-                    <td>{{$trafficpoint->id}}</td>
-                    <td>{{$trafficpoint->name}}</td>
-                    <td>anarkoli</td>
-                </tr>
-                @endforeach
+            <tr>
+            <th>traffic point id</th>
+            <th>traffic point name</th>
+            <th>traffic point incharge</th>
+        </tr>
+        @foreach($trafficpoint as $trafficpoint)
+        <tr>
+            <td>{{$trafficpoint->tp_id}}</td>
+            <td>{{$trafficpoint->tp_name}}</td>
+            <td>{{$trafficpoint->tp_incharge_name}}</td>
+        </tr>
+        @endforeach
                 
             </table>
         </div>
@@ -52,6 +33,7 @@
     <div style="background-color:rgb(255, 255, 255);margin:10px">
         
         <div  id="detils_table" class="p-3 text-center">
+            
            
 
         </div>
