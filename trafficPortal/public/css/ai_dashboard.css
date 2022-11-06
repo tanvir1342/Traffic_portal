@@ -7,7 +7,7 @@
 .child-container-1{
     background-color:rgb(255, 255, 255);
     margin: 10px;
-    color: rgb(53, 93, 204);
+    color: rgb(16, 16, 19);
 
     
 }
@@ -18,7 +18,7 @@ width: 100%;
 }
 
 #trafficpoint td, #customers th {
-border: 1px solid #ddd;
+border: 1px solid rgb(64, 126, 126);
 padding: 8px;
 }
 
