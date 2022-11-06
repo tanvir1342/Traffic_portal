@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\DutyList;
+use App\Models\EChalan;
 
 class dutyEmployeeControler extends Controller
 {
@@ -28,7 +29,9 @@ class dutyEmployeeControler extends Controller
     }
     function loadE_ChalanView()
     {
-        return view("Duty_Employee.DeEchalan");
+        $id = session()->get('id');
+        $chalan = EChalan::where('vehicle_no','=',$id)->get(); 
+        return view("Duty_Employee.DeEchalan")->with("chalan",$chalan);
     }
    
    //
