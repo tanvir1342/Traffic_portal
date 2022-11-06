@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             DutyListSeeder::class,
             CivilEmployeeSeeder::class,
             EmployeeDetailsSeeder::class,
+            SystemUserSeeder::class,
         ]);
     }
 }

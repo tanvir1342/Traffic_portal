@@ -62,8 +62,23 @@ color: white;
     <button onclick="preview()" class="btn btn-secondary m-3">Make duty roster</button>
  </div>
  <div class="child-container-1">
-    child 2
-    <div id="detils_table">
+    <div>
+        <table id="employee">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Traffic Point ID</th>
+                <th>slot</th>
+            </tr>
+            <tbody id="detils_table">
+
+            </tbody>
+
+        </table>
+        <div id="button">
+
+        </div>
 
     </div>
 </div>
@@ -86,7 +101,7 @@ color: white;
                         
                         if(this.readyState == 4 && this.status == 200)
                         {
-                            console.log(this.responseText);
+                            //console.log(this.responseText);
                             if(this.responseText == "data not found"){
                                // document.getElementById('notfound').innerHTML = "Data not found";
                                 //console.log("data not found")
@@ -95,19 +110,38 @@ color: white;
                             {
                                 
                                  var data =  JSON.parse(this.responseText);
-                                 console.log(data);
+                                 //console.log(data);
                                  var html = "";
+                                 var listt= [];
                                 for (var i = 0; i<data.length;i++) {
-                                    // var em_id = data[i].id;
-                                    // var name = data[i].name;
-                                     html+= "<img class='rounded-circle' src='https://mdbcdn.b-cdn.net/img/new/avatars/9.webp' />";
+                                       var id = data[i].emplyee_id ;
+                                       var name = data[i].employe_name;
+                                       var rank = data[i].rank;
+                                       var tp_id = data[i].tp_id;
+                                    
+                                            html+=    "<tr>"
+                                            html+=     "<td>"+id+"</td>"
+                                            html+=     "<td>"+name+"</td>"
+                                            html+=     "<td>"+rank+"</td>"
+                                            html+=     "<td>"+tp_id+"</td>"
+                                            html+=     "<td>Slot</td>"
+                                            html+=     " </tr>";
+                                            listt.push(data[i].emplyee_id);
 
-                             }
-                                document.getElementById("detils_table").innerHTML = html;
+                             }      
+                                 
+                                    var buttondata = "";
+                                    buttondata+= "<button onclick='lock("+listt+")'>lock</button>"
+                                    document.getElementById("detils_table").innerHTML = html;
+                                    document.getElementById("button").innerHTML = buttondata;
+                                    console.log(listt);
                             }
 
                         }
                     }
+    }
+function lock(data){
+        console.log(data);
     }
 </script>
 @endsection
