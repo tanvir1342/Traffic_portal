@@ -5,7 +5,7 @@
         
         let id = tp_id;
         var link = "/ai/demploye/"+id;
-        //console.log(link);
+        //console.log(id);
         let http = new XMLHttpRequest();
                     http.open('get', link, true);
                     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -15,8 +15,7 @@
                         
                         if(this.readyState == 4 && this.status == 200)
                         {
-                            
-                            console.log(this.responseText);
+                            //console.log(this.responseText);
                             if(this.responseText == "data not found"){
                                // document.getElementById('notfound').innerHTML = "Data not found";
                                 //console.log("data not found")
@@ -25,8 +24,10 @@
                             {
                                 //document.getElementById('notfound').innerHTML = "";
                                 var data =  JSON.parse(this.responseText);
-                                //console.log(data);
+                                console.log(data);
                                 var html = " ";
+                                html+=    "<table>"
+                                html+=    "<th> Employee ID </th><th> Employee Name </th><th> Status </th>"
                                 for (var i = 0; i<data.length;i++) {
                                     var id = data[i].emplyee_id ;
                                     var name = data[i].employe_name;
@@ -34,21 +35,15 @@
                                 
                                 /*console.log(insertdata);
                                 console.log(link);*/
-
-
-                                html+=    "<table>"
+                               
                                 html+=    "<tr>"
                                 html+=     "<td>"+id+"</td>";
                                 html+=     "<td>"+name+"</td>";
                                 html+=     "<td>"+status+"</td>";
                                 html+=     "</tr>"
-                                html+=     "</table>"
-                                    
-                                           
-                       
-
 
                             }
+                            html+=     "</table>"
                             document.getElementById("detils_table").innerHTML = html;
                               //console.log("working");
                             }
