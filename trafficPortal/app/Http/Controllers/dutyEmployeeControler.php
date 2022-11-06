@@ -13,7 +13,7 @@ class dutyEmployeeControler extends Controller
     {
          
         $id = session()->get('id');
-        $employe = DutyList::where('employe_id','=',$id)->get();
+        $employe = DutyList::where('employe_id','=',$id)->get(); 
         
 
         return view("Duty_Employee.DeDashboard")->with("employe",$employe);
