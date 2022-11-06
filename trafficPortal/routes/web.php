@@ -36,6 +36,9 @@ Route::get('/tpi/leftchartdata/daily',[tpdashboard::class, 'dailyzonechart'])->m
 Route::get('/ai',[aidashboard::class, 'index'])->middleware('Validuser')->middleware('Validuser');
 Route::get('/ai/demploye/{id}',[aidashboard::class, 'dutyEmployeProfile'])->middleware('Validuser');
 Route::get('/aiprofile',[aidashboard::class, 'AiProfile'])->middleware('Validuser');
+Route::get('/ai/leftchartdata',[aidashboard::class, 'monthlyzonechart'])->middleware('Validuser');
+Route::get('/ai/leftchartdata/daily',[tpdashboard::class, 'dailyzonechart'])->middleware('Validuser');
+
 // Route::get('/tpi/employelist',[tpdashboard::class, 'em_list']);
 
 // Duty Employee Route

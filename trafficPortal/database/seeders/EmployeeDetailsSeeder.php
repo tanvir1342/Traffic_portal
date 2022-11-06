@@ -23,7 +23,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>2,
             'user_id'=>1
         ]);
         DB::table('employee_details')->insert([
@@ -56,7 +56,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>2,
             'user_id'=>4
         ]);
         DB::table('employee_details')->insert([
@@ -78,7 +78,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'leave',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>2,
             'user_id'=>6
         ]);
         DB::table('employee_details')->insert([
@@ -111,7 +111,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>3,
             'user_id'=>9
         ]);
         DB::table('employee_details')->insert([
@@ -120,9 +120,9 @@ class EmployeeDetailsSeeder extends Seeder
             'sallary'=>6000,
             'rank'=>'sgt',
             'appoinment'=>'null',
-            "status"=>'running',
+            "status"=>'leave',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>3,
             'user_id'=>10
         ]);
         DB::table('employee_details')->insert([
@@ -133,7 +133,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>3,
             'user_id'=>11
         ]);
         DB::table('employee_details')->insert([
@@ -166,7 +166,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>3,
             'user_id'=>14
         ]);
         DB::table('employee_details')->insert([
@@ -177,7 +177,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>3,
             'user_id'=>15
         ]);
         DB::table('employee_details')->insert([
@@ -188,7 +188,7 @@ class EmployeeDetailsSeeder extends Seeder
             'appoinment'=>'null',
             "status"=>'running',
             'joining_date'=>'2022-04-04',
-            'tp_id'=>1,
+            'tp_id'=>3,
             'user_id'=>16
         ]);
     }

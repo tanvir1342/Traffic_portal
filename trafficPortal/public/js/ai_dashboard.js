@@ -55,17 +55,17 @@
     }
 
 
-    
-
-//chart.js 1st 1
+var left_labaels_data = ['Morning', 'Afternoon', 'Night'];
+var left_chart_data =[50,50,50 ];
+//monthly data chart ajax 
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels:left_labaels_data,
         datasets: [{
             label: 'Daily vechile',
-            data: [12, 19, 3, 5, 2, 3],
+            data: left_chart_data,
             backgroundColor: [
                 'rgba(255, 99, 132)',
                 'rgba(54, 162, 235)',
@@ -93,6 +93,78 @@ const myChart = new Chart(ctx, {
         }
     }
 });
+
+//chart combo box function
+
+function chartt()
+{
+   
+    let data = document.getElementById("chart_option_one");
+    var text = data.options[data.selectedIndex].text;
+
+    if(text == 'Daily'){            
+
+        console.log(text)
+        let http = new XMLHttpRequest();
+        http.open('get','/tpi/leftchartdata/daily', true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send();
+        http.onreadystatechange = function () {
+
+            if (this.readyState == 4 && this.status == 200) {
+                //console.log(this.responseText);
+                if (this.responseText == "data not found") {
+                    
+                } else {
+                    var data = JSON.parse(this.responseText);
+                    console.log(data);
+                    var html = " ";
+                    for (var i = 0; i < data.length; i++) {
+                        var   morning = data[i].morning;
+                        var   afternoon = data[i].afternoon;
+                        var   night = data[i].night;
+                        value = [morning, afternoon,night];
+                        myChart.data.datasets[0].data = value;
+                        myChart.update();
+                        console.log(value);
+                    }
+                }
+            }
+        }
+
+
+    }//end of if
+    else{
+        console.log(text)
+        let http = new XMLHttpRequest();
+        http.open('get','ai/leftchartdata', true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send();
+        http.onreadystatechange = function () {
+
+            if (this.readyState == 4 && this.status == 200) {
+                //console.log(this.responseText);
+                if (this.responseText == "data not found") {
+                    
+                } else {
+                    var data = JSON.parse(this.responseText);
+                    console.log(data);
+                    var html = " ";
+                    for (var i = 0; i < data.length; i++) {
+                        var   morning = data[i].morning;
+                        var   afternoon = data[i].afternoon;
+                        var   night = data[i].night;
+                        value = [morning, afternoon,night];
+                        myChart.data.datasets[0].data = value;
+                        myChart.update();
+                    }
+                }
+            }
+        }
+    }//end of else
+
+    }//end of chart function
+
 
 
 //2nd chart.js

@@ -37,7 +37,7 @@
     <div style="padding:10px">
             <h1>Details of Employees</h1>
         </div>
-    <div id= "trafficpoint" ><div  id="detils_table" class="p-3 text-center" style="padding:10px" >
+    <div id= "trafficpoint" ><div  id="detils_table" id="trafficpoint" class="p-3 text-center" style="padding:10px" >
             
 
 
@@ -53,17 +53,33 @@
 
     {{-- 3rd --}}
     <div class="d-flex justify-content-center" style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
-        <div style="width:400px">
-            <canvas id="myChart"></canvas>
+        <div style="width:400px;margin-top:20px">
+        <h1>Area Based</h1>
+            <select class="form-select" aria-label="Default select example" id="chart_option_one"  onclick="chartt()">
+                <option selected>Monthly</option>
+                <option value="1">Weekly</option>
+                <option value="2">Daily</option>
+            </select>
+            <div >
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
         
     </div>
-    <div style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
-        <div style="width:600px">
-            <canvas id="2ndchart"></canvas>
+    <div class="d-flex justify-content-center" style="background-color:rgb(255, 255, 255); margin:10px;padding 10px;">
+        <div style="width:400px;margin-top:20px">
+        <h1>Traffic Point Based</h1>
+            <select class="form-select" aria-label="Default select example" id="chart_option_one"  onclick="chartt()">
+                <option selected>Monthly</option>
+                <option value="1">Weekly</option>
+                <option value="2">Daily</option>
+            </select>
+            <div >
+                <canvas id="2ndchart"></canvas>
+            </div>
         </div>
+        
     </div>
-</div>
 
 
   
