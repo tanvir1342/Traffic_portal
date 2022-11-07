@@ -60,7 +60,7 @@ var left_chart_data =[50,50,50 ];
 //monthly data chart ajax 
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
         labels:left_labaels_data,
         datasets: [{
