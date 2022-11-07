@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('e_chalans', function (Blueprint $table) {
-            
+            $table->id('echalan_id');
+            $table->bigInteger('employe_id');
             $table->string("name");
             $table->string("trasport");
             $table->string("vehicle_no");

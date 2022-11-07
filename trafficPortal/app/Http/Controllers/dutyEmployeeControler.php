@@ -30,7 +30,7 @@ class dutyEmployeeControler extends Controller
     function loadE_ChalanView()
     {
         $id = session()->get('id');
-        $chalan = EChalan::where('vehicle_no','=',$id)->get(); 
+        $chalan = EChalan::where('employe_id','=',$id)->get(); 
         return view("Duty_Employee.DeEchalan")->with("chalan",$chalan);
     }
    

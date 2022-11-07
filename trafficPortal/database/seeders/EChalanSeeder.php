@@ -16,6 +16,8 @@ class EChalanSeeder extends Seeder
     public function run()
     {
         DB::table('e_chalans')->insert([
+            'employe_id'=>1,
+            'name' => 'Paul Tomal',
             'name' => 'Paul Tomal',
             'trasport' => 'Rickshwa',
             'vehicle_no' =>"Dhaka city 00-234",
